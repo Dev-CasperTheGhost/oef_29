@@ -1,0 +1,57 @@
+/*nullen van margin en padding van alle selectors*/
+* {
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+}
+/*nieuwe html5 elementen gekend maken voor oude browsers*/
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block;
+}
+
+/*zoveel mogelijk basisinstellingen met de body meegeven*/
+body {
+  min-width: 650px; /* beperkt het verkleinen op een bepaalde breedte*/
+  /*in het 6e jaar ga je dan andere css toepassen voor kleinere schermen*/
+}
+
+/*puzzel van beelden in mekaar doen passen met flexbox*/
+img {
+  width: 50%;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+#grid {
+  display: flex;
+  width: 100%;
+  height: 1000px;
+  max-width: 3000px;
+}
+
+#grid figure {
+  line-height: 0;
+  flex-basis: 50%;
+  height: 100%;
+}
+
+figure#linker img {
+  height: 1000px;
+}
+
+figure#rechter img {
+  height: 500px;
+}
+
+figure#rechter img:first-of-type {
+  width: 100%;
+}
